@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FITNESS FREAK</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        body {
+            font-family: 'Noto Serif', serif;
+            margin: 0px;
+            padding: 0px;
+            color: white;
+        }
+
+        .left {
+            /* border: 2px solid red; */
+            display: inline-block;
+            position: absolute;
+            left: 34px;
+            top: 36px;
+
+        }
+
+        .left img {
+            width: 60px;
+            filter: invert(100%);
+        }
+
+        .left div {
+            position: relative;
+            top: 19px;
+            float: right;
+            text-align: center;
+        }
+
+        .nav {
+            display: block;
+            width: 41%;
+            top: 33px;
+            margin: 42px auto;
+            /* border: 2px solid green; */
+        }
+
+        .navbar li {
+            display: inline-block;
+            list-style: none;
+            margin: 16px -2px;
+
+        }
+
+        .navbar li a {
+
+            color: white;
+            text-decoration: none;
+            padding: 34px 23px;
+        }
+
+        .navbar li a:hover {
+            color: gray;
+            text-decoration: underline;
+
+        }
+
+        .right {
+            display: inline-block;
+            position: absolute;
+            right: 30px;
+            top: 48px;
+            /* border: 2px solid yellow; */
+        }
+
+        .btn {
+            margin: 0px 9px;
+            background-color: black;
+            color: white;
+            padding: 5px 8px;
+            border: 2px solid grey;
+            border-radius: 10px;
+            cursor: pointer;
+
+        }
+
+        .btn:hover {
+            background-color: #fcb443;
+        }
+
+        .container {
+            border: 3px solid white;
+            margin: 75px 42px;
+            padding: 32px 3px;
+            width: 30%;
+            text-align: center;
+            border-radius: 5px;
+            border-color:#fcb443;
+            
+        }
+
+        .form-group input {
+            
+            display: block;
+            width: 65%;
+            margin: 11px auto;
+            padding: 6px;
+            border: 2px solid black;
+            text-align: center;
+            font-size: large;
+        }
+
+        .container h1 {
+            font-family: 'Noto Serif', serif;
+            text-decoration: underline;
+        }
+        #myVideo {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        min-width: 100%;
+        min-height: 100%;
+        z-index: -1;
+        
+}
+
+       </style >
+</head>
+
+<body>
+    <video autoplay muted loop id="myVideo">
+        <source src="/GYM WEBSITE/production ID_4761426.mp4" type="video/mp4">
+      </video>
+    <header class="header content">
+        <div class="left">
+            <img src="img/logo1.jpg" alt="">
+            <div>
+                FITNESS FREAK
+            </div>
+        </div>
+
+        <div class="nav content">
+            <ul class="navbar">
+                <li> <a href="#">HOME</a></li>
+                <li> <a href="#">ABOUT</a></li>
+                <li> <a href="#">ENQUIRY FORM</a></li>
+                <li> <a href="#">CONTACT US</a></li>
+            </ul>
+        </div>
+        <div class="right content">
+            <button class="btn">Call Us Now </button>
+            <button class="btn">Email Us</button>
+        </div>
+        <div class="container ">
+            <h1>
+                JOIN NOW
+            </h1>
+            <form action="noaction.php">
+                <div class="form-group">
+                    <input type="text" name="" placeholder="Enter Your Name">
+                </div>
+                <div class="form-group">
+                    <input type="number" name="" placeholder="Age">
+                </div>
+                <div class="form-group">
+                    <input type="text" name="" placeholder="Locality">
+                </div>
+                <div class="form-group">
+                    Enter The Month Of Joining
+                    <input type="month" name="bdaymonth">
+                </div>
+                <span >GENDER :
+                    <input type="radio" name="Gender" id="gender" value="Male">
+                    <label for="gender">Male</label>
+                    <input type="radio" name="Gender" id="gender" value="Female">
+                    <label for="gender">Female</label><br>
+                </span>
+                <button class="btn">
+                    Submit
+                </button>
+                <input type="reset">
+
+
+            </form>
+            <p style="font-size: 10px  ; float: left;">**TERM AND CONDITIONS APPLY**
+            </p>
+            </div>
+    </header>
+
+
+</body>
+
+</html>
