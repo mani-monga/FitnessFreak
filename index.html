@@ -15,14 +15,21 @@
             padding: 0px;
             color: white;
         }
+        
+        .navv{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            position: fixed;
+            top: 0;
+            height: 80px;
+            background-color: black;
+        }
 
         .left {
             /* border: 2px solid red; */
             display: inline-block;
-            position: absolute;
-            left: 34px;
-            top: 36px;
-
+            flex-basis: 20%;
         }
 
         .left img {
@@ -33,31 +40,31 @@
         .left div {
             position: relative;
             top: 19px;
-            float: right;
+            float: left;
             text-align: center;
         }
 
-        .nav {
-            display: block;
-            width: 41%;
-            top: 33px;
-            margin: 42px auto;
+        .nav{
+            display: flex;
+            flex-direction: row;
+            flex-basis: 50%;
+            text-align: center;
             /* border: 2px solid green; */
+            width: 50%;
         }
 
-        .navbar li {
-            display: inline-block;
-            list-style: none;
-            margin: 16px -2px;
-
+        .nav ul li{
+            
+            display: inline;
+            flex-direction: row;
+            margin: 0 20px;
         }
 
-        .navbar li a {
-
-            color: white;
+        .nav ul li a{
             text-decoration: none;
-            padding: 34px 23px;
+            color: white;
         }
+        
 
         .navbar li a:hover {
             color: gray;
@@ -66,18 +73,18 @@
         }
 
         .right {
-            display: inline-block;
-            position: absolute;
-            right: 30px;
-            top: 48px;
+            flex-basis: 30%;
             /* border: 2px solid yellow; */
+            display: flex;
+            justify-content: end;
         }
 
         .btn {
-            margin: 0px 9px;
+            margin: 10px;
+            padding: 20px;
+            font-size: 20px;
             background-color: black;
             color: white;
-            padding: 5px 8px;
             border: 2px solid grey;
             border-radius: 10px;
             cursor: pointer;
@@ -90,10 +97,13 @@
         }
 
         .container {
+            position: absolute;
+            top: 50px;
             border: 3px solid white;
             margin: 75px 42px;
             padding: 32px 3px;
             width: 30%;
+            height: 400px;
             text-align: center;
             border-radius: 5px;
             border-color:#fcb443;
@@ -134,61 +144,63 @@
     <video autoplay muted loop id="myVideo">
         <source src="../production ID_4761426.mp4">
       </video>
-    <header class="header content">
-        <div class="left">
-            <img src="img/logo1.jpg" alt="">
-            <div>
-                FITNESS FREAK
+    
+        <div class="navv">
+            <div class="left">
+                <img src="img/logo1.jpg" alt="">
+                <div>
+                    FITNESS FREAK
+                </div>
             </div>
-        </div>
-
-        <div class="nav content">
-            <ul class="navbar">
-                <li> <a href="#">HOME</a></li>
-                <li> <a href="#">ABOUT</a></li>
-                <li> <a href="#">ENQUIRY FORM</a></li>
-                <li> <a href="#">CONTACT US</a></li>
-            </ul>
-        </div>
-        <div class="right content">
-            <button class="btn">Call Us Now </button>
-            <button class="btn">Email Us</button>
-        </div>
-        <div class="container ">
-            <h1>
-                JOIN NOW
-            </h1>
-            <form action="noaction.php">
-                <div class="form-group">
-                    <input type="text" name="" placeholder="Enter Your Name">
-                </div>
-                <div class="form-group">
-                    <input type="number" name="" placeholder="Age">
-                </div>
-                <div class="form-group">
-                    <input type="text" name="" placeholder="Locality">
-                </div>
-                <div class="form-group">
-                    Enter The Month Of Joining
-                    <input type="month" name="bdaymonth">
-                </div>
-                <span >GENDER :
-                    <input type="radio" name="Gender" id="gender" value="Male">
-                    <label for="gender">Male</label>
-                    <input type="radio" name="Gender" id="gender" value="Female">
-                    <label for="gender">Female</label><br>
-                </span>
-                <button class="btn">
-                    Submit
-                </button>
-                <button class="btn" type="reset">Reset</button>
-
-
-            </form>
-            <p style="font-size: 8px  ; float: left; color: red;">**TERM AND CONDITIONS APPLY**
-            </p>
+    
+            <div class="nav content">
+                <ul class="navbar">
+                    <li> <a href="#">HOME</a></li>
+                    <li> <a href="#">ABOUT</a></li>
+                    <li> <a href="#">ENQUIRY FORM</a></li>
+                    <li> <a href="#">CONTACT US</a></li>
+                </ul>
             </div>
+            <div class="right content">
+                <button class="btn">Call Us Now </button>
+                <button class="btn">Email Us</button>
+            </div>
+       
     </header>
+    <div class="container ">
+        <h1>
+            JOIN NOW
+        </h1>
+        <form action="noaction.php">
+            <div class="form-group">
+                <input type="text" name="" placeholder="Enter Your Name">
+            </div>
+            <div class="form-group">
+                <input type="number" name="" placeholder="Age">
+            </div>
+            <div class="form-group">
+                <input type="text" name="" placeholder="Locality">
+            </div>
+            <div class="form-group">
+                Enter The Month Of Joining
+                <input type="month" name="bdaymonth">
+            </div>
+            <span >GENDER :
+                <input type="radio" name="Gender" id="gender" value="Male">
+                <label for="gender">Male</label>
+                <input type="radio" name="Gender" id="gender" value="Female">
+                <label for="gender">Female</label><br>
+            </span>
+            <button class="btn">
+                Submit
+            </button>
+            <button class="btn" type="reset">Reset</button>
+
+
+        </form>
+        <p style="font-size: 8px  ; float: left; color: red;">**TERM AND CONDITIONS APPLY**
+        </p>
+        </div>
 
 
 </body>
